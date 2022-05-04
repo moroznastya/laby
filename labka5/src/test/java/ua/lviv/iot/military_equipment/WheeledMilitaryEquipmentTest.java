@@ -25,7 +25,7 @@ class WheeledMilitaryEquipmentTest {
         wheeledMilitaryEquipments.add(new APC("btr60", 100, 2, 116,
                 "streeled_rolled"));
         wheeledMilitaryEquipments.add(new CRPV(20, 7, 5.75, 2.35, 2.395,
-                4, 30, "combined_multilayer") );
+                4, 30, "combined_multilayer", 50) );
 
     }
 

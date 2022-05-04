@@ -7,6 +7,16 @@ public class AnotherMilitaryEquipment extends MilitaryEquipment {
     protected double height;
 
     @Override
+    public String getHeaders() {
+        return super.getHeaders() ;
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV();
+    }
+
+    @Override
     public String toString() {
         return "Another_military_equipment{" +
                 "weight=" + weight +

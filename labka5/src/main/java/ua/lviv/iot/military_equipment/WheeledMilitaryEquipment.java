@@ -9,12 +9,22 @@ public class WheeledMilitaryEquipment extends MilitaryEquipment {
     public int fuelConsumption; //na 100 km
 
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", fuelConsumption";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + fuelConsumption;
+    }
+
 
     public ArrayList<WheeledMilitaryEquipment> addWheeledMilitaryEquipment(){
         ArrayList<WheeledMilitaryEquipment> wheeledMilitaryEquipments = new ArrayList<WheeledMilitaryEquipment>();
                 wheeledMilitaryEquipments.add(new APC("btr60", 100, 2, 116, "streeled_rolled"));
         wheeledMilitaryEquipments.add(new CRPV(20, 7, 5.75, 2.35, 2.395, 4,
-                30, "combined_multilayer") );
+                30, "combined_multilayer", 50) );
         return wheeledMilitaryEquipments;
 
     }

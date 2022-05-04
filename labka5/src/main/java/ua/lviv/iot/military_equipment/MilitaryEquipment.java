@@ -11,6 +11,25 @@ public class MilitaryEquipment {
     public String typeOfArmor;
 
 
+
+
+    public String getHeaders() {
+        return "maxSpeed, numberInTheCrew, typeOfArmor";
+    }
+
+    public String toCSV() {
+        return this.getMaxSpeed() + ", " + this.getNumberInTheCrew() + ", " + this.getTypeOfArmor();
+    }
+
+
+
+
+
+
+    public int getMaxSpeed() {
+        return maxSpeed;
+    }
+
     public String getTypeOfArmor() {
         return typeOfArmor;
     }
@@ -18,6 +37,7 @@ public class MilitaryEquipment {
     public int getNumberInTheCrew() {
         return numberInTheCrew;
     }
+
 
 
     ArrayList<MilitaryEquipment> militaryEquipments = new ArrayList<MilitaryEquipment>();
@@ -32,9 +52,9 @@ public class MilitaryEquipment {
         militaryEquipments.add(new IFV(13, 6.375, 2.94, 56, 3,
                 "streeled_rolled"));
         militaryEquipments.add(new CRV(13, 6.76, 2.94, 1.92, 29, 6,
-                "bulletproof"));
+                "bulletproof", 60));
         militaryEquipments.add(new CRPV(20, 7, 5.75, 2.35, 2.395,
-                4, 30, "combined_multilayer"));
+                4, 30, "combined_multilayer", 50));
 
         return militaryEquipments;
     }

@@ -13,7 +13,7 @@ public class CRV extends AnotherMilitaryEquipment {
     }
 
     public CRV(int weight, double length, double width, double height, int trunkLength, int numberInTheCrew,
-               String typeOfArmor) {
+               String typeOfArmor, int maxSpeed) {
         super.weight = weight;
         super.length = length;
         super.width = width;
@@ -21,7 +21,18 @@ public class CRV extends AnotherMilitaryEquipment {
         this.trunkLength = trunkLength;
         super.numberInTheCrew = numberInTheCrew;
         super.typeOfArmor = typeOfArmor;
+        super.maxSpeed = maxSpeed;
 
 
+    }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", trunkLength";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + trunkLength;
     }
 }

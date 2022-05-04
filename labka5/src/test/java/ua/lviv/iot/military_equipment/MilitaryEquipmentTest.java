@@ -23,9 +23,9 @@ private ArrayList<MilitaryEquipment> militaryEquipments;
         militaryEquipments.add(new IFV(13, 6.375, 2.94, 56, 3,
                 "streeled_rolled"));
         militaryEquipments.add(new CRV(13, 6.76, 2.94, 1.92, 29, 6,
-                "bulletproof"));
+                "bulletproof", 60));
         militaryEquipments.add(new CRPV(20, 7, 5.75, 2.35, 2.395,
-                4, 30, "combined_multilayer"));
+                4, 30, "combined_multilayer",50));
     }
 
     @AfterEach

@@ -26,4 +26,14 @@ public class IFV extends AnotherMilitaryEquipment {
 
 
     }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", weight";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + weight;
+    }
 }

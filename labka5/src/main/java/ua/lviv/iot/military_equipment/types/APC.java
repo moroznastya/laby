@@ -14,6 +14,16 @@ public class APC extends WheeledMilitaryEquipment {
     }
 
     @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", name";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + name;
+    }
+
+    @Override
     public String toString() {
         return "APC{" +
                 "name='" + name + '\'' + "number in the crew = " + super.numberInTheCrew +
