@@ -51,37 +51,28 @@ private ArrayList<MilitaryEquipment> militaryEquipments;
     @Test
     void sortByNumber_in_the_crewAsc() {
         MilitaryEquipment militaryEquipment1 = new MilitaryEquipment();
+
         militaryEquipment1.addMilitary_equipment();
-        militaryEquipment1.sortByNumber_in_the_crewAsc();
-        var result = militaryEquipment1.militaryEquipments;
-        Assertions.assertEquals(militaryEquipments.get(1).numberInTheCrew,
-                result.get(0).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(0).numberInTheCrew,
-                result.get(1).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(2).numberInTheCrew,
-                result.get(2).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(4).numberInTheCrew,
-                result.get(3).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(3).numberInTheCrew,
-                result.get(4).numberInTheCrew);
+        int [] expected = {2, 3, 3, 4, 6};
+        militaryEquipment1.sortByNumber_in_the_crewAsc(militaryEquipments);
+for(int i=0; i<militaryEquipments.size()-1; i++){
+    Assertions.assertEquals(expected[i],
+            militaryEquipments.get(i).numberInTheCrew);
+}
+
     }
 
     @Test
     void sortByNumberInTheCrewDesc() {
         MilitaryEquipment militaryEquipment1 = new MilitaryEquipment();
+
         militaryEquipment1.addMilitary_equipment();
-        militaryEquipment1.sortByNumberInTheCrewDesc();
-        var result = militaryEquipment1.militaryEquipments;
-        Assertions.assertEquals(militaryEquipments.get(3).numberInTheCrew,
-                result.get(0).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(4).numberInTheCrew,
-                result.get(1).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(2).numberInTheCrew,
-                result.get(2).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(0).numberInTheCrew,
-                result.get(3).numberInTheCrew);
-        Assertions.assertEquals(militaryEquipments.get(1).numberInTheCrew,
-                result.get(4).numberInTheCrew);
+        int [] expected = {6,4,3,3,2};
+        militaryEquipment1.sortByNumberInTheCrewDesc(militaryEquipments);
+        for(int i=0; i<militaryEquipments.size()-1; i++){
+            Assertions.assertEquals(expected[i],
+                    militaryEquipments.get(i).numberInTheCrew);
+        }
 
     }
 
