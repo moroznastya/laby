@@ -1,0 +1,10 @@
+maxSpeed, numberInTheCrew, typeOfArmor, groundClearance
+70, 3, combined_multilayer, 500
+maxSpeed, numberInTheCrew, typeOfArmor, fuelConsumption, name
+100, 2, streeled_rolled, 116, btr60
+maxSpeed, numberInTheCrew, typeOfArmor, weight
+56, 3, streeled_rolled, 13
+maxSpeed, numberInTheCrew, typeOfArmor, trunkLength
+60, 6, bulletproof, 29
+maxSpeed, numberInTheCrew, typeOfArmor, fuelConsumption, specificPower
+50, 4, combined_multilayer, 30, 20
